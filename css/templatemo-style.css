@@ -257,7 +257,7 @@ a:hover, a:active, a:focus {
   animation: spinner .6s linear infinite;
 }
 
-@-webkit-@keyframes spinner {
+@keyframes spinner {
   to {transform: rotate(360deg);}
 }
 
@@ -277,14 +277,15 @@ a:hover, a:active, a:focus {
 }
 
 .custom-navbar .navbar-brand {
-    color: #333;
-	text-shadow: 1px 1px #fff;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 35px;
-    letter-spacing: 1px;
+   width: 100px;
+   height: 70px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-
+.custom-navbar .navbar-brand img{
+  width: 90%;
+}
 .custom-navbar .nav li a {
     color: #666;
     font-size: 14px;
@@ -377,7 +378,29 @@ a:hover, a:active, a:focus {
 }
 
 
-
+/* -------------------------------------
+   Galerie
+---------------------------------------- */
+.images-galerie{
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: space-between; */
+  /* align-items: flex-start; */
+  gap: 10px;
+}
+.images-galerie > *{
+  height: 250px;
+  flex-grow: 1;
+  object-fit: cover;
+  object-position: top;
+}
+.images-galerie div{
+  width: 100%;
+  height: 0;
+  max-width: 700px;
+}
 /*---------------------------------------
    About section              
 -----------------------------------------*/
@@ -434,7 +457,9 @@ a:hover, a:active, a:focus {
   font-size: 42px;
   padding-bottom: 22px;
 }
-
+#service .service-thumb{
+  height: 100%;
+}
 
 
 /*---------------------------------------
